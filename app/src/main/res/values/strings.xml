@@ -3,4 +3,9 @@
     <string name="descr_imagen">Mascota</string>
     <string name="actionbar_acerca_de">Acerca de ..</string>
     <string name="actionbar_contacto">Contacto</string>
+    <string name="contacto_correo">Ingresa tu correo</string>
+    <string name="contacto_asunto">Ingresa el asunto</string>
+    <string name="contacto_mensaje">Ingresa tu mensaje</string>
+    <string name="contacto_titulo">Dejanos un mensaje</string>
+    <string name="contacto_boton_enviar">Enviar Mensaje</string>
 </resources>

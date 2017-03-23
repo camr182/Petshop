@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:id="@+id/activity_contacto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <TextView
+            android:id="@+id/tvContactoTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contacto_titulo"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textAlignment="center"/>
+
+        <android.support.design.widget.TextInputEditText
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:id="@+id/inCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/contacto_correo"
+            android:layout_below="@id/tvContactoTitulo"/>
+
+
+        <android.support.design.widget.TextInputEditText
+         android:id="@+id/inAsunto"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/inCorreo"
+         android:hint="@string/contacto_asunto"/>
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/inMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inAsunto"
+            android:hint="@string/contacto_mensaje"
+            />
+
+        <Button
+            android:id="@+id/btnEnviarCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inMensaje"
+            android:text="@string/contacto_boton_enviar"
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

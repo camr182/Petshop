@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.minecraft.petshop.Mascota;
+import com.example.minecraft.petshop.Pojo.Mascota;
 import com.example.minecraft.petshop.R;
 
 import java.util.List;
