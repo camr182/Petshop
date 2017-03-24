@@ -1,7 +1,6 @@
-package com.example.minecraft.petshop.Fragments;
+package com.example.minecraft.petshop.fragments;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -9,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.minecraft.petshop.Adaptadores.MascotaAdapter;
 import com.example.minecraft.petshop.Adaptadores.MascotaPerfilAdapter;
 import com.example.minecraft.petshop.Pojo.Mascota;
 import com.example.minecraft.petshop.R;

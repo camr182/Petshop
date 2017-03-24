@@ -11,8 +11,8 @@ import android.view.MenuItem;
 import com.example.minecraft.petshop.Activities.About;
 import com.example.minecraft.petshop.Activities.Contacto;
 import com.example.minecraft.petshop.Adaptadores.PageAdapter;
-import com.example.minecraft.petshop.Fragments.Fragment_listado_mascotas;
-import com.example.minecraft.petshop.Fragments.Fragment_perfil_mascota;
+import com.example.minecraft.petshop.fragments.Fragment_listado_mascotas;
+import com.example.minecraft.petshop.fragments.Fragment_perfil_mascota;
 
 import java.util.ArrayList;
 

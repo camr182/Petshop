@@ -6,6 +6,7 @@ package com.example.minecraft.petshop.Pojo;
 
 public class Mascota {
 
+    private  int id;
     private int imagen;
     private String nombre;
     private int likes;
@@ -79,5 +80,13 @@ public class Mascota {
 
     public void setLikes(int likes) {
         this.likes = likes;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

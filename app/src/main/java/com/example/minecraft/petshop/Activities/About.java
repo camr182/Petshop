@@ -1,6 +1,5 @@
 package com.example.minecraft.petshop.Activities;
 
-import android.app.ActionBar;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,9 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.minecraft.petshop.Mail;
+import com.example.minecraft.petshop.Mail.Mail;
 import com.example.minecraft.petshop.R;
-import com.example.minecraft.petshop.SendEmailAsyncTask;
+import com.example.minecraft.petshop.Mail.SendEmailAsyncTask;
 
 public class About extends AppCompatActivity {
 

@@ -1,12 +1,16 @@
 package com.example.minecraft.petshop.Adaptadores;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.minecraft.petshop.Activities.DetalleMascota;
 import com.example.minecraft.petshop.Pojo.Mascota;
 import com.example.minecraft.petshop.R;
 
@@ -25,14 +29,16 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
 
         public ImageView foto;
         public TextView nombre;
-        public TextView visitas;
+        public TextView tvLikes;
+        public ImageButton btnLike;
 
         public MascotaViewHolder(View itemView) {
             super(itemView);
 
             foto = (ImageView) itemView.findViewById(R.id.ivFoto);
             nombre = (TextView) itemView.findViewById(R.id.tvNombre);
-            visitas = (TextView) itemView.findViewById(R.id.tvLike);
+            tvLikes = (TextView) itemView.findViewById(R.id.tvLike);
+            btnLike = (ImageButton) itemView.findViewById(R.id.ibtnLike);
 
         }
     }
@@ -51,9 +57,37 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
     @Override
     public void onBindViewHolder(MascotaViewHolder holder, int position) {
 
+        final Mascota mascota = items.get(position);
+
         holder.foto.setImageResource(items.get(position).getImagen());
         holder.nombre.setText(items.get(position).getNombre());
-        holder.visitas.setText(String.valueOf(items.get(position).getLikes()));
+        holder.tvLikes.setText(String.valueOf(items.get(position).getLikes())+" Likes");
+
+
+        holder.foto.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(),mascota.getNombre(),Toast.LENGTH_SHORT).show();
+
+                Intent i = new Intent(v.getContext(), DetalleMascota.class);
+                i.putExtra("nombre",mascota.getNombre());
+                i.putExtra("likes",mascota.getLikes());
+                i.putExtra("imagen",mascota.getImagen());
+                v.getContext().startActivity(i);
+
+            }
+        });
+
+        holder.btnLike.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(),"Diste like a "+mascota.getNombre(),Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
+
+
+
 
     }
 

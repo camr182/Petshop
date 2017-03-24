@@ -1,4 +1,4 @@
-package com.example.minecraft.petshop.Fragments;
+package com.example.minecraft.petshop.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
