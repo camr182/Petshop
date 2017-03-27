@@ -8,11 +8,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.minecraft.petshop.Activities.About;
 import com.example.minecraft.petshop.Activities.Contacto;
 import com.example.minecraft.petshop.Adaptadores.PageAdapter;
-import com.example.minecraft.petshop.fragments.Fragment_listado_mascotas;
-import com.example.minecraft.petshop.fragments.Fragment_perfil_mascota;
+import com.example.minecraft.petshop.vista.fragments.Fragment_listado_mascotas;
+import com.example.minecraft.petshop.vista.fragments.Fragment_perfil_mascota;
 
 import java.util.ArrayList;
 
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.acerca:
 
-                Intent i = new Intent(this,About.class);
+                Intent i = new Intent(this,Contacto.class);
                 startActivity(i);
 
             break;
@@ -88,12 +87,6 @@ public class MainActivity extends AppCompatActivity {
 
                 break;
 
-            case R.id.detalleMascota:
-
-                Intent inr = new Intent(this,About.class);
-                startActivity(inr);
-
-                break;
 
         }
 

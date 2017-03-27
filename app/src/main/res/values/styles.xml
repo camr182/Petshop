@@ -11,7 +11,25 @@
         <item name="android:textColor">@color/textColor</item>
         <item name="android:windowBackground">@color/windowsBackgorundColor</item>
 
-
     </style>
+
+        <!--Etiqueta flotante-->
+
+        <style name="FloatingLabel" parent="@android:style/TextAppearance">
+
+            <item name="android:textColor">@color/naranja</item>
+            <item name="android:textSize">@dimen/floating_label</item>
+        </style>
+
+        <!--Campo de texto-->
+        <style name="EditText" parent="AppTheme">
+            <!-- cursor y línea normal-->
+            <item name="colorControlNormal">@color/indigo</item>
+            <!-- cursor y línea con foco-->
+            <item name="colorControlActivated">@color/teal</item>
+        </style>
+
+
+
 
 </resources>

@@ -1,4 +1,4 @@
-package com.example.minecraft.petshop.Pojo;
+package com.example.minecraft.petshop.model;
 
 /**
  * Created by minecraft on 12/03/2017.
@@ -57,6 +57,7 @@ public class Mascota {
         this.likes = likes;
     }
 
+    public Mascota(){}
 
     public int getImagen() {
         return imagen;

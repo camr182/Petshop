@@ -7,12 +7,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.minecraft.petshop.Pojo.Mascota;
+import com.example.minecraft.petshop.model.Mascota;
 import com.example.minecraft.petshop.R;
 import com.mikhaellopez.circularimageview.CircularImageView;
 
 import java.util.List;
-import java.util.zip.Inflater;
 
 /**
  * Created by ameza on 21/03/2017.

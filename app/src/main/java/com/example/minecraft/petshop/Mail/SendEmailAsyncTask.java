@@ -3,7 +3,7 @@ package com.example.minecraft.petshop.Mail;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.example.minecraft.petshop.Activities.About;
+import com.example.minecraft.petshop.Activities.Contacto;
 
 import javax.mail.AuthenticationFailedException;
 import javax.mail.MessagingException;
@@ -14,7 +14,7 @@ import javax.mail.MessagingException;
 
 public class SendEmailAsyncTask extends AsyncTask<Void, Void, Boolean> {
     public Mail m;
-    public About activity;
+    public Contacto activity;
 
     public SendEmailAsyncTask() {}
 

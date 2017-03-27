@@ -1,5 +1,6 @@
 package com.example.minecraft.petshop.Adaptadores;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,9 +12,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.minecraft.petshop.Activities.DetalleMascota;
-import com.example.minecraft.petshop.Pojo.Mascota;
+import com.example.minecraft.petshop.model.ConstructorMascotas;
+import com.example.minecraft.petshop.model.Mascota;
 import com.example.minecraft.petshop.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,14 +25,19 @@ import java.util.List;
 
 public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaViewHolder> {
 
-    private List<Mascota> items;
+    private ArrayList<Mascota> items;
+    Activity activity;
 
+    public MascotaAdapter(ArrayList<Mascota> items, Activity activity) {
+        this.items = items;
+        this.activity = activity;
+    }
 
     public static class MascotaViewHolder extends RecyclerView.ViewHolder {
 
         public ImageView foto;
         public TextView nombre;
-        public TextView tvLikes;
+        private TextView tvLikes;
         public ImageButton btnLike;
 
         public MascotaViewHolder(View itemView) {
@@ -43,9 +51,7 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
         }
     }
 
-    public MascotaAdapter(List<Mascota> items) {
-        this.items = items;
-    }
+
 
     @Override
     public MascotaViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -55,13 +61,14 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
     }
 
     @Override
-    public void onBindViewHolder(MascotaViewHolder holder, int position) {
+    public void onBindViewHolder(final MascotaViewHolder holder, int position) {
 
         final Mascota mascota = items.get(position);
+        ConstructorMascotas constructorMascotas = new ConstructorMascotas(activity);
 
         holder.foto.setImageResource(items.get(position).getImagen());
         holder.nombre.setText(items.get(position).getNombre());
-        holder.tvLikes.setText(String.valueOf(items.get(position).getLikes())+" Likes");
+        holder.tvLikes.setText(constructorMascotas.obtenerLikesMascota(mascota) + " " + "Likes");
 
 
         holder.foto.setOnClickListener(new View.OnClickListener() {
@@ -80,14 +87,14 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
         holder.btnLike.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Toast.makeText(v.getContext(),"Diste like a "+mascota.getNombre(),Toast.LENGTH_SHORT).show();
+
+                ConstructorMascotas constructorMascotas = new ConstructorMascotas(activity);
+                constructorMascotas.darLikeMascota(mascota);
+                holder.tvLikes.setText(constructorMascotas.obtenerLikesMascota(mascota) + " " + "Likes");
+
+
             }
         });
-
-
-
-
-
-
 
     }
 

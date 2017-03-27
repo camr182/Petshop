@@ -1,4 +1,4 @@
-package com.example.minecraft.petshop.fragments;
+package com.example.minecraft.petshop.vista.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.minecraft.petshop.Adaptadores.MascotaPerfilAdapter;
-import com.example.minecraft.petshop.Pojo.Mascota;
+import com.example.minecraft.petshop.model.Mascota;
 import com.example.minecraft.petshop.R;
 
 import java.util.ArrayList;
