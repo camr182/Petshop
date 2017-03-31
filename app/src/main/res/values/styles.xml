@@ -14,14 +14,16 @@
     </style>
 
         <!--Etiqueta flotante-->
-
         <style name="FloatingLabel" parent="@android:style/TextAppearance">
-
+            <!--Color de la etiqueta flotante inicio-->
             <item name="android:textColor">@color/naranja</item>
+            <!--tamaño de la etiqueta flotante-->
             <item name="android:textSize">@dimen/floating_label</item>
+            <!--Color del hint antes que flote-->
+            <item name="android:textColorHint">@color/colorPrimaryDark</item>
         </style>
 
-        <!--Campo de texto-->
+        <!--underLine de la etiqueta flotante-->
         <style name="EditText" parent="AppTheme">
             <!-- cursor y línea normal-->
             <item name="colorControlNormal">@color/indigo</item>
@@ -29,6 +31,17 @@
             <item name="colorControlActivated">@color/teal</item>
         </style>
 
+
+    <!--color del contador de caracteres despues de superar el limite, tambien cambia el texto del floating text-->
+    <style name="AppTheme.CharacterCounter" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/rojo</item>
+    </style>
+
+    <!-- mensaje de error debajo del EditText-->
+    <style name="AppTheme.EditTextError" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/rojo</item>
+        <item name="android:textSize">@dimen/error</item>
+    </style>
 
 
 

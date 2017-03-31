@@ -5,5 +5,9 @@
     <dimen name="mascota_tamanio">350dp</dimen>
     <dimen name="floating_label">12dp</dimen>
 
+    <dimen name="error">13sp</dimen>
 
-</resources>
+
+
+
+    </resources>

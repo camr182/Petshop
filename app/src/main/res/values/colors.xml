@@ -10,5 +10,7 @@
     <color name="naranja">#FF5722</color>
     <color name="indigo">#3F51B5</color>
     <color name="teal">#009688</color>
+    <color name="purpura">#673AB7</color>
+    <color name="rojo">#ff0008</color>
 
 </resources>
